@@ -61,8 +61,8 @@ node scripts/migrate.js
 Hacer un POST al endpoint de setup:
 
 ```bash
-curl -X POST https://TU-DOMINIO.vercel.app/api/auth/setup \
-  -H "x-setup-secret: TU_SETUP_SECRET"
+curl -X POST https://https://tienda-kobcraft-i1yjwpy30-gonzako-s-projects.vercel.app/api/auth/setup \
+  -H "x-setup-secret: ashe"
 ```
 
 ¡Listo! Ya podés ingresar en `/admin/login`.
