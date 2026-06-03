@@ -4,10 +4,12 @@ import { verifyToken } from './lib/auth';
 export async function middleware(req: NextRequest) {
   const { pathname } = req.nextUrl;
 
+  // Login page is always accessible
   if (pathname === '/admin/login') {
     return NextResponse.next();
   }
 
+  // Protect all other /admin routes
   if (pathname.startsWith('/admin')) {
     const token = req.cookies.get('kob_session')?.value;
     if (!token) {
